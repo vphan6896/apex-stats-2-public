@@ -4,7 +4,8 @@ import os
 import unittest
 import json
 #from ..app import app
-from unittest.mock import MagicMock
+from unittest import mock
+from mock import MagicMock
 
 # mock impl from Johannes Fahrenkrug on Stack Overflow
 # This method will be used by the mock to replace requests.get
