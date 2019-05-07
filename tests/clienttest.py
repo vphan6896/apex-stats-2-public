@@ -6,9 +6,9 @@ path = "/usr/tmp"
 # Check current working directory.
 retval = os.getcwd()
 print "Current working directory %s" % retval
-os.chdir('app')
+#os.chdir('app')
 # Import our app.py
-from app import search
+from app.app import search
 os.chdir(retval)
 
 import unittest
