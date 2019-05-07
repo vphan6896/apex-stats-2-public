@@ -3,7 +3,7 @@ import os
 
 import unittest
 import json
-import app.app
+import ..app.app
 from unittest.mock import MagicMock
 
 # mock impl from Johannes Fahrenkrug on Stack Overflow
