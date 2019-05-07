@@ -1,10 +1,10 @@
 #!/usr/bin/python
 import os
 
-import unittest
 import json
 #from ..app import app
-from unittest import mock
+import unittest
+#from unittest import mock
 from mock import MagicMock
 
 # mock impl from Johannes Fahrenkrug on Stack Overflow
