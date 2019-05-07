@@ -1,18 +1,9 @@
 #!/usr/bin/python
 import os
 
-path = "/usr/tmp"
-
-# Check current working directory.
-retval = os.getcwd()
-print "Current working directory %s" % retval
-#os.chdir('app')
-# Import our app.py
-import app.app
-os.chdir(retval)
-
 import unittest
 import json
+import app.app
 from unittest.mock import MagicMock
 
 # mock impl from Johannes Fahrenkrug on Stack Overflow
