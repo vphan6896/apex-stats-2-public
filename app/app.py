@@ -1,5 +1,4 @@
 import os
-import time
 
 from flask import request
 from flask import Flask, render_template
@@ -19,12 +18,12 @@ def search():
     print("username: %s" % username)
     payload = {'platform': 'ps4', 'name': 'Daltoosh'}
     headers = {"Authorization": "BFJHq1rIGYpCVKeeWgbvfH8i_iXdMTPiZBlWm-n3_gs"}
-
-    r = requests.get('https://www.apexlegendsapi.com/api/v1/player?platform=ps4&name=Daltoosh', headers=headers).text
-    r = requests.get('https://api.github.com').text
+    url = 'https://www.apexlegendsapi.com/api/v1/player?platform=ps4&name=Daltoosh'
+    #r = requests.get(url, headers=headers).text
+    r = requests.get('https://api.github.com').content
     r = json.loads(r)
-    print("Executed requests: %s" % r['level'])
-    return r['level']
+    print("Executed requests: %s" % r)
+    return r
 
 
 @app.route("/")
