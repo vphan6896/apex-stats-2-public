@@ -19,7 +19,8 @@ pipeline {
       }
       steps {
         container('python') {
-          sh "python -m .tests"
+	  sh "
+          sh "python tests/clienttest.py"
           sh "export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml"
           sh "jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:$PREVIEW_VERSION"
           dir('./charts/preview') {
