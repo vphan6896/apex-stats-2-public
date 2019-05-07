@@ -8,7 +8,7 @@ retval = os.getcwd()
 print "Current working directory %s" % retval
 os.chdir('app')
 # Import our app.py
-from app.py import search
+from app import search
 os.chdir(retval)
 
 import unittest
