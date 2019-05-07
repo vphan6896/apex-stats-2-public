@@ -1,10 +1,10 @@
-#import os
-#import time
+import os
+import time
 
-#from flask import request
+from flask import request
 from flask import Flask, render_template
-#import requests
-#import json
+import requests
+import json
 import socket
 
 application = Flask(__name__)
