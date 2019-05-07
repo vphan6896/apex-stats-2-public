@@ -11,7 +11,6 @@ class Testing(unittest.TestCase):
         a = True
         b = True
         self.assertEqual(a, b)
-    def test_
 
 if __name__ == '__main__':
     unittest.main()
