@@ -7,6 +7,11 @@ path = "/usr/tmp"
 retval = os.getcwd()
 print "Current working directory %s" % retval
 os.chdir('app/app.py')
+path = '.'
+ 
+files = os.listdir(path)
+for name in files:
+    print(name)
 # Import our app.py
 from app import search
 os.chdir(retval)
