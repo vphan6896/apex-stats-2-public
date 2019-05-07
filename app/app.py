@@ -39,9 +39,9 @@ def hello():
         return render_template('index.html', hostname=host_name, ip=host_ip)
     except:
         return render_template('error.html')
-    data = search()
-    print("Entries: %s" % data)
-    return render_template('index.html', display=data)
+    user_data = search()
+    print("Entries: %s" % user_data)
+    return render_template('index.html', data=user_data)
     return render_template('index.html')
 
 
