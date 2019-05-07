@@ -34,7 +34,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        container('python') {
+        container('python:3.6') {
 
           // ensure we're not on a detached head
           sh "git checkout master"
