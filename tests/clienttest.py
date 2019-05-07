@@ -6,7 +6,7 @@ path = "/usr/tmp"
 # Check current working directory.
 retval = os.getcwd()
 print "Current working directory %s" % retval
-os.chdir('../app.py')
+os.chdir('../app/app.py')
 # Import our app.py
 from app import search
 os.chdir(retval)
