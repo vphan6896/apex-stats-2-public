@@ -24,7 +24,7 @@ def search():
     r = requests.get('https://api.github.com').text
     r = json.loads(r)
     print("Executed requests: %s" % r['level'])
-    return hello()
+    return r['level']
 
 
 @app.route("/")
@@ -42,7 +42,7 @@ def hello():
     data = search()
     print("Entries: %s" % data)
     return render_template('index.html', display=data)
-    return render_template('index.html')
+    
 
 
 if __name__ == "__main__":
