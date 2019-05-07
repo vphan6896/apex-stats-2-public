@@ -1,10 +1,53 @@
-CTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index page</title>
-</head>
-<body>
-The hostname of the container is <b>{{ hostname }}</b> and its IP is <b>{{ ip }}</b>.
-</body>
-</html>
+<!DOCTYPE html>
+ <html>
+ <head>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"                crossorigin="anonymous">
+   <title>Apex Legends Stats edit 1</title>
+
+
+ <style>
+ .bodycenter {
+     margin: auto;
+     width: 60%;
+     padding: 10px;
+     text-align:center;
+ }
+
+ body{
+     background-color: #333333;
+     color: white;
+ }
+
+ footer{
+        position: fixed;
+        text-align:center;
+        bottom: 0px;
+        padding: 0px;
+        width: 55%;
+ }
+ </style>
+ </head>
+
+ <body>
+   <div class="bodycenter">
+
+     <form action="search" method="post">
+       <h1>Web App for Apex Legends Stats</h1>
+       <br>
+       Input username: <input type="text" name="username">
+       <input type="submit" value="Search">
+     </form> <br>
+
+     <p>Username: </p>
+     <p>display</p>
+
+     <footer> Powered by
+     <a href="https://www.apexlegendsapi.com"rel="noopener noreferrer" target="_blank">https://www.apexlegendsapi.com/</a>
+     </footer>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ </body>
+ </html>
+
