@@ -1,8 +1,8 @@
-FROM python:3.6
-LABEL maintainer="lorenz.vanthillo@gmail.com"
+FROM python:3.7.3
 COPY . /app
 WORKDIR /app
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 EXPOSE 8080
 ENTRYPOINT ["python"]
-CMD ["app/app2.py"]
+CMD ["app/app.py"]
