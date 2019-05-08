@@ -6,7 +6,6 @@ import socket
 
 application = Flask(__name__)
 app = application
-username = ""
 
 @app.route('/search', methods=['POST'])
 def search():
@@ -22,11 +21,18 @@ def search():
     url = 'https://public-api.tracker.gg/apex/v1/standard/profile/2/%s' % username
     #url = 'https://api.github.com'
     print('about to request')
-    r = requests.get(url, headers = headers).text
-    print('requested')
-    r = json.loads(r)
-    print('json load')
-    r= "damage done: %f" % r["data"]["stats"][4]["value"]
+    try:
+        r = requests.get(url, headers = headers).text
+        username = "Username: %s" % username
+        print('requested')
+        r = json.loads(r)
+        print('json load')
+        r= "Damage done: %.2f" % r["data"]["stats"][4]["value"]
+        
+    except:
+        r = "Error. The player most likely does not exist."
+        return hello()
+    
     print("Executed requests: %s" % r)
     return hello()
 
@@ -40,7 +46,7 @@ def hello():
     try:
         host_name = socket.gethostname()
         host_ip = socket.gethostbyname(host_name)
-        return render_template('index.html', hostname=host_name, ip=host_ip, username=username, data=r)
+        return render_template('index.html', data = r, user=username)
     except:
         return render_template('error.html')
 
@@ -48,4 +54,3 @@ def hello():
 if __name__ == "__main__":
     #app.debug = True
     app.run(host='0.0.0.0', port=8080)
-
