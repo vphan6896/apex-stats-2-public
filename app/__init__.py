@@ -1,2 +1,2 @@
 #__init__.py
-from .app import seacrh 
+from .app import search 
