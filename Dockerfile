@@ -1,9 +1,6 @@
-FROM ubuntu:16.04
-RUN sudo apt-get update -y \ 
-    && sudo apt-get upgrade
+FROM python:3.7.3
 COPY . /app
 WORKDIR /app
-RUN sudo apt install python-pip
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 EXPOSE 8080
