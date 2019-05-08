@@ -1,9 +1,9 @@
 FROM ubuntu:16.04
-RUN apt-get update -y \ 
-    && apt-get upgrade
+RUN sudo apt-get update -y \ 
+    && sudo apt-get upgrade
 COPY . /app
 WORKDIR /app
-RUN apt install python-pip
+RUN sudo apt install python-pip
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 EXPOSE 8080
