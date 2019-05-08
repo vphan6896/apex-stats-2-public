@@ -1,4 +1,6 @@
-FROM python:3.7.3
+FROM ubuntu:16.04
+RUN apt-get update -y \ 
+    && apt-get upgrade
 COPY . /app
 WORKDIR /app
 RUN pip install --upgrade pip
