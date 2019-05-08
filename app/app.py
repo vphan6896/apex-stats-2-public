@@ -6,6 +6,8 @@ import socket
 
 application = Flask(__name__)
 app = application
+r=0
+username = 'username here'
 
 @app.route('/search', methods=['POST'])
 def search():
