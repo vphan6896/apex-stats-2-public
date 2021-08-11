@@ -3,7 +3,7 @@ Elias Neypes & Vy Phan
 Apex Legends HTTP server
 
 Demo:
-https://www.youtube.com/watch?v=g6l3LZFDMCE&ab_channel=darkxerag
+https://www.youtube.com/watch?v=g6l3LZFDMCE
 
 1. Problem and relevancy: “Apex Legends” is an online multiplayer video game on various gaming platforms. Because it is a new game and very popular, players are seeking to be the best and need to distinguish themselves someway in their gameplay. This can be tracked by simply looking at players’ statistics. 
  
