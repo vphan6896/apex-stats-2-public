@@ -1,6 +1,10 @@
 # python-http
 Elias Neypes & Vy Phan
 Apex Legends HTTP server
+
+Demo:
+https://www.youtube.com/watch?v=g6l3LZFDMCE&ab_channel=darkxerag
+
 1. Problem and relevancy: “Apex Legends” is an online multiplayer video game on various gaming platforms. Because it is a new game and very popular, players are seeking to be the best and need to distinguish themselves someway in their gameplay. This can be tracked by simply looking at players’ statistics. 
  
 2. Solution Architecture:The Python Flask application will be developed locally where we then push our updated code to Github. This pushing event will then trigger JenkinsX where it will run a unit test for the code and push it to our WIP branch of our dev stage repository. We then have a pre-merge gating where we have to create a pull request for the new commit and have a chance to look at the proposed changes and merge with the master branch of the dev stage. This will then prompt Jenkins X to push the code to the staging repository where it will run through functional tests. After it passes, it will go to the production stage where the website might go through production tests before showing for visitors. 
