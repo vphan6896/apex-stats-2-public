@@ -17,9 +17,9 @@ def search():
     username = request.form['username']
     print("username: %s" % username)
     payload = {'platform': 'ps4', 'name': username}
-    #headers = {"Authorization": "BFJHq1rIGYpCVKeeWgbvfH8i_iXdMTPiZBlWm-n3_gs"}
-    headers = {"TRN-Api-Key": "ca75f97e-51d8-4413-b857-a3695ef652cf"}
-    #url = 'https://www.apexlegendsapi.com/api/v1/player?platform=ps4&name=Daltoosh'
+    #headers = {"Authorization": "<AuthToken>"}
+    headers = {"TRN-Api-Key": "<API KEY>"}
+    #url = 'https://www.apexlegendsapi.com/api/v1/player?platform=ps4&name=<playerName>'
     url = 'https://public-api.tracker.gg/apex/v1/standard/profile/2/%s' % username
     #url = 'https://api.github.com'
     print('about to request')
